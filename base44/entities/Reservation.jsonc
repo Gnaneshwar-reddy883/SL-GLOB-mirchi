@@ -1,0 +1,64 @@
+{
+  "name": "Reservation",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Guest name"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone number"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email address"
+    },
+    "date": {
+      "type": "string",
+      "title": "Booking date"
+    },
+    "time": {
+      "type": "string",
+      "title": "Booking time"
+    },
+    "guests": {
+      "type": "number",
+      "title": "Number of guests"
+    },
+    "request": {
+      "type": "string",
+      "title": "Special request"
+    },
+    "submitted_at": {
+      "type": "string",
+      "title": "Submitted at"
+    }
+  },
+  "required": [
+    "name",
+    "phone",
+    "email",
+    "date",
+    "time",
+    "guests"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
